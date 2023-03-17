@@ -140,7 +140,7 @@ class Flag extends StatelessWidget {
   }) async {
     for (final flag in flagList) {
       final loader = SvgStringLoader('packages/flag/res/4x3/$flag.svg');
-      svg.cache
+      await svg.cache
           .putIfAbsent(loader.cacheKey(null), () => loader.loadBytes(null));
     }
   }
