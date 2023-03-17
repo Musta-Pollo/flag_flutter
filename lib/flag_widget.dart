@@ -134,17 +134,15 @@ class Flag extends StatelessWidget {
     }
   }
 
-  static Future<void> preloadFlag({
-    required BuildContext context,
-    List<String> flagList = flagsCode,
-  }) async {
-    for (final flag in flagList) {
-      await precachePicture(
-          ExactAssetPicture(
-            SvgPicture.svgStringDecoderBuilder,
-            'packages/flag/res/4x3/$flag.svg',
-          ),
-          context);
-    }
-  }
+  // static Future<void> preloadFlag({
+  //   required BuildContext context,
+  //   List<String> flagList = flagsCode,
+  // }) async {
+  //   for (final flag in flagList) {
+  //     ExactAssetImage(
+  //       '$flag.svg',
+  //       package: 'packages/flag/res/4x3/',
+  //     );
+  //   }
+  // }
 }
