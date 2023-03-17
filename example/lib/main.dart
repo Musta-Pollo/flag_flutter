@@ -148,9 +148,9 @@ class _FlagPicker extends State<FlagPicker> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    // if (widget.preCache) {
-    //   Flag.preloadFlag(context: context);
-    // }
+    if (widget.preCache) {
+      Flag.preloadFlag(context: context);
+    }
   }
 
   @override
